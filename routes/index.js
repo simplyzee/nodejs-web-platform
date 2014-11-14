@@ -26,10 +26,5 @@ function heartbeat(req, res) {
 }
 
 function fileNotFound(req, res) {
-  req.data.page = {
-    id: 'error-404',
-    title: 'File not found'
-  };
-
-  res.status(404).render('404', req.data);
+  res.status(404).render('error/404');
 }

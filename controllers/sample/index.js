@@ -4,7 +4,7 @@
 // Preprocess the templates for use by angular
 function index(req, res, next) {
   var data = {
-    text: 'Hello, World!'
+    title: 'Hello, World!'
   };
 
   res.render('sample/index', data);
