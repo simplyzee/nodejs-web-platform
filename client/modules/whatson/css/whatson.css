@@ -7,30 +7,46 @@ and open the template in the editor.
     Created on : 15-Nov-2014, 12:03:02
     Author     : Kasia
 */
-.row div{
-    width:45%;
-    height:60%;
-    margin: 0 2em 2em 0;
-    float:left;
-    border:1px solid black;
-}
 
-.description{
+
+.event-description{
     display:none;
 }
 
-.news{
+.dance{
     background-color:red;
 }
 
-.offers{
+.art{
     background-color:blue;
 }
 
-.events{
+.sport{
     background-color:green;
 }
 
-.info{
+.music{
     background-color:yellow;
+}
+
+.theatre{
+    background-color:yellow;
+}
+
+.event{
+    background-color:yellow;
+}
+
+
+#owl-other-demo .item, #owl-demo .item{
+  margin: 3px;
+}
+#owl-demo .item .block, #owl-demo .item .block{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.owl-controls{
+    visibility: hidden !important;
 }

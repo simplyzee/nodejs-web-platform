@@ -1,35 +1,59 @@
-whatson.controller('whatsonIndexController', ['$scope','$http', function($scope,$http){
-    /*$http({
+whatson.controller('whatsonIndexController', ['$scope','$http','$interval', function($scope,$http,$interval){
+    var alldata = [];
+    
+    $http({
         url: 'http://whatson.dev.opencity.io/whats-on',
         method: "GET"
-    }).success(function (data) {
-        console.log(data);return;
-    }).error(function (data) {
-        $scope.status = status;
-    });*/
+    }).success(function (data){
+        alldata = data;
+        setTimeout(function(){
+        $("#owl-demo").owlCarousel({
+            items : 2,
+            lazyLoad : true,
+            navigation : true
+          });
+    },100);
     
-    var alldata = [
-        {id:1, title:'test', description:'description', category:'offers', date:'23/03/2014', venue:'here'},
-        {id:2, title:'test2', description:'description2', category:'events', date:'03/07/2014', venue:'there'},
-        {id:3, title:'test3', description:'description3', category:'news', date:'02/09/2014', venue:'farawway'},
-        {id:4, title:'test4', description:'description4', category:'info', date:'04/07/2014', venue:'close'}
-    ];
+    setTimeout(function(){
+        $("#owl-other-demo").owlCarousel({
+            items : 2,
+            lazyLoad : true,
+            navigation : true
+          });
+    },100);
     
-    $scope.firstRow=alldata.slice(0,2);
-    $scope.secondRow=alldata.slice(2,4);
-    $scope.custom = true;
-    
-    $scope.goToSection = function(value){
-        $('.event-description').css('display','none');
-        $('.event-info').css('display','none');
-        $('.event-'+value).css('display','inline');
+    var startSecond = (alldata.length/2);
         
-    };
+    $scope.firstRow=alldata.slice(0,startSecond);
+    $scope.secondRow=alldata.slice(startSecond,alldata.length);
+    }).error(function (data){
+        alldata = false;
+    });
+        
+    $scope.goToSection = function(value){        
+        $scope.selectedEvent = value;
+        //console.log(Date.today());
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth()+1; //January is 0!
+        var yy = today.getFullYear()
+        var day = value.date.split('-');
+        
+        if (dd===parseInt(day[2].split(' ')[0]) && mm===parseInt(day[1]) && yy===parseInt(day[0])){
+            $scope.selectedEvent.date = 'TODAY';
+        }
+        
+     };
     
     $scope.goBackEvents = function(){
-        $('.event-description').css('display','none');
-        $('.event-info').css('display','inline');
+        $scope.selectedEvent = undefined;
     };
+    
+    
+    
+    
+    
+    
     //$scope.dataFirstRow=JSON.parse(alldata.splice(0,2));
     //$scope.dataSecondRow=alldata.splice(2,4);
 }]);
