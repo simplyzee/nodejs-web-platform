@@ -22,10 +22,6 @@ polls.controller('pollsIndexController', ['$scope', '$http', '$location', functi
 
 
 //        $http.post(pollPostUrl, pollData).success(function(data, status, headers, config){
-//            console.log('post success');
-//            console.log('data');
-//            console.log(data);
-//
 //            window.location = '/#/polls/voted';
 //
 //        }).error(function(data, status, headers, config){
