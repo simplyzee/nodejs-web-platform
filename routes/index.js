@@ -24,6 +24,7 @@ app.get('/api/sample', sample.index);
 app.use( express.static(__dirname + '/../client'));
 app.use('/components/', express.static(__dirname + '/../bower_components'));
 
+
 // Angular Application
 app.get('/', function(req, res){
 	res.render('client/app');
