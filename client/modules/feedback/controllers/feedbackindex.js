@@ -3,6 +3,7 @@ feedback.controller('feedbackIndexController', ['$scope', '$http', function($sco
 
 	$scope.enterarea =  function () {
 		keyb_change();
+		
 	}
 
 	$scope.caretpositions = function () {
