@@ -1,0 +1,35 @@
+<div class="container">
+    <h1>Whats On</h1>
+    <div ng-show="!selectedEvent">
+        <div class="row" id="owl-demo">
+            <div class="event-info item"  ng-repeat="data in firstRow" ng-classs="[data.category]">
+                <div class="block col-md-6">
+                    <div class="event-info">
+                        <p>{{data.title}}</p>
+                        <p>{{data.date}}</p>
+                        <button ng-click="goToSection(data)">More Info</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="owl-other-demo">
+            <div class="item" ng-repeat="data in secondRow" ng-class="[data.category]">
+                <div class="block col-md-8">
+                    <div class="event-info">
+                        <p>{{data.title}}</p>
+                        <p>{{data.date}}</p>
+                        <button ng-click="goToSection(data.id)">More Info</button>
+                    </div>
+                </div>        
+            </div>
+        </div>
+    </div>
+    
+    <div class="row" ng-show="selectedEvent">
+                        <p>{{selectedEvent.title}}</p>
+                        <p>{{selectedEvent.date}}</p>
+        <div ng-bind="data.description"></div>
+        <button ng-click="goBackEvents()">Go Back</button>
+    </div>
+</div>

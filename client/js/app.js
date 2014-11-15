@@ -1,1 +1,1 @@
-var app = angular.module('app', ['dashboard', 'sample', 'polls', 'selfie', 'treasurehunt']);
+var app = angular.module('app', ['dashboard', 'sample', 'polls', 'selfie', 'whatson', 'feedback', 'treasurehunt']);
