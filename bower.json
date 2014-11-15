@@ -9,6 +9,7 @@
     "bootstrap-sass-official": "~3.2.0",
     "es5-shim": "~4.0.3",
     "metro-bootstrap": "*",
-    "angular-qrcode": "monospaced/angular-qrcode#~5.1.0"
+    "angular-qrcode": "monospaced/angular-qrcode#~5.1.0",
+    "jquery": "~2.1.1"
   }
 }
