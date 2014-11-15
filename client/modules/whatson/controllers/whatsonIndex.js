@@ -1,14 +1,12 @@
-whatson.controller('whatsonIndexController', ['$scope', function($scope){
-    //$http({
-     //   url: 'http://whatson.dev.opencity.io/whatson',
-      //  method: "POST"
-    //}).success(function (data, status, headers, config) {
-    //    console.log(data);return;
-    //}).error(function (data, status, headers, config) {
-    //    $scope.status = status;
-    //});
-    
-    
+whatson.controller('whatsonIndexController', ['$scope','$http', function($scope,$http){
+    /*$http({
+        url: 'http://whatson.dev.opencity.io/whats-on',
+        method: "GET"
+    }).success(function (data) {
+        console.log(data);return;
+    }).error(function (data) {
+        $scope.status = status;
+    });*/
     
     var alldata = [
         {id:1, title:'test', description:'description', category:'offers', date:'23/03/2014', venue:'here'},
@@ -31,8 +29,6 @@ whatson.controller('whatsonIndexController', ['$scope', function($scope){
     $scope.goBackEvents = function(){
         $('.event-description').css('display','none');
         $('.event-info').css('display','inline');
-      
-        
     };
     //$scope.dataFirstRow=JSON.parse(alldata.splice(0,2));
     //$scope.dataSecondRow=alldata.splice(2,4);

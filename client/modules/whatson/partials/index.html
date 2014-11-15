@@ -1,24 +1,26 @@
 <div class="container">
     <h1>Whats On</h1>
-      <div class="row">
-            <div class="col-md-6">
-                <p>{TITLE 1}</p>
-                <p>{DESCRIPTION 1}</p>
-            </div>
-            <div class="col-md-6">
-                <p>{TITLE 2}</p>
-                <p>{DESCRIPTION 2}</p>
-            </div>
+    <div class="row">
+        <div class="event-info"  ng-repeat="data in firstRow" ng-classs="data.category">
+            <p>{{data.title}}</p>
+            <p>{{data.venue}}</p>
+            <button ng-click="goToSection">More Info</button>
         </div>
+        <div class="description">
+            <p>{{data.short_description}}</p>
+            <button ng-click="goBackEvents()">Go Back</button>
+        </div>
+    </div>
 
     <div class="row">
-        <div class="col-md-6">
-            <p>{TITLE 3}</p>
-            <p>{DESCRIPTION 3}</p>
+        <div class="event-info" ng-repeat="data in secondRow" ng-class="[data.category]">
+            <p>{{data.title}}</p>
+            <p>{{data.venue}}</p>
+            <button ng-click="goToSection()">More Info</button>
         </div>
-        <div class="col-md-6">
-            <p>{TITLE 4}</p>
-            <p>{DESCRIPTION 4}</p>
+        <div class="description">
+            <p>{{data.short_description}}</p>
+            <button ng-click="goBackEvents()">Go Back</button>
         </div>
     </div>
 </div>
