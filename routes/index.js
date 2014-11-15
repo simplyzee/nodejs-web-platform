@@ -5,8 +5,7 @@ var app               = global.app,
     express           = global.express,
     googleAnalyticsId = global.nconf.get('GOOGLE_ANALYTICS_ID'),
     ua                = require('universal-analytics'),
-    sample            = require('../controllers/sample'),
-    dashboard         = require('../controllers/dashboard');
+    sample            = require('../controllers/sample');
 
 // Heartbeat
 app.get('/heartbeat', heartbeat);
