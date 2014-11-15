@@ -28,25 +28,34 @@
               position: relative;
           }
       </style>
+      <link rel="stylesheet" href="/components/metro-bootstrap/dist/css/metro-bootstrap.min.css">
 
-
+      <div class="hack-wrap">
     <div class="poll">
         <h2>Voted Poll Title</h2>
         <h3>Results</h3>
-
+        <h2 class="text-center"> {{poll.name}} </h2>
         <div class="chart">
-            <div class="poll-result" style="height: 70%;">
-                <span class="poll-number">3454</span>
-                <span class="poll-fill">Yes</span>
-            </div>
-            <div class="poll-result poll-right" style="height: 30%;">
-                <span class="poll-number">1054</span>
-                <span class="poll-fill">No</span>
+            <div ng-repeat="(key, value) in poll.options" class="poll-result" ng-style="pollResultsHeight(poll.results, key)" ng-class="{'poll-right': $last}">
+                <span class="poll-number">{{poll.results[key]}}</span>
+                <span class="poll-fill">{{value}}</span>
             </div>
         </div>
 
-        <p>
-            <a href="/#/">Back to Dashboard</a>
-            <a href="/#/polls/past">Previous Polls</a>
-        </p>
+
     </div>
+          </div>
+
+      <div class="common-menu">
+          <nav>
+              <ul class="nav navbar-nav">
+                  <li><a href="/#/menu">Home</a></li>
+                  <li><a href="/#/polls">Back to Current Poll</a></li>
+                  <!-- this is where other Breadcrumb-style nav buttons go -->
+              </ul>
+
+              <ul class="nav navbar-nav navbar-right navbar-feedback">
+                  <li class="pull-right"><a href="/">Give us feedback</a></li>
+              </ul>
+          </nav>
+      </div>

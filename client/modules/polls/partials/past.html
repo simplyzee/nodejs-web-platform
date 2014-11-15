@@ -12,6 +12,10 @@
           }
       </style>
 
+      <link rel="stylesheet" href="/components/metro-bootstrap/dist/css/metro-bootstrap.min.css">
+
+      <div class="hack-wrap">
+
     <div class="poll">
         <h2>Poll Question Title</h2>
         <h3>October 2014</h3>
@@ -37,7 +41,18 @@
         </p>
     </div>
 
-    <p>
-        <a href="/#/">Back to Dashboard</a>
-        <a href="/#/polls">Back to feedback</a>
-    </p>
+    </div>
+
+      <div class="common-menu">
+          <nav>
+              <ul class="nav navbar-nav">
+                  <li><a href="/#/menu">Home</a></li>
+                  <li><a href="/#/polls">Back to Current Poll</a></li>
+                  <!-- this is where other Breadcrumb-style nav buttons go -->
+              </ul>
+
+              <ul class="nav navbar-nav navbar-right navbar-feedback">
+                  <li class="pull-right"><a href="/">Give us feedback</a></li>
+              </ul>
+          </nav>
+      </div>
