@@ -1,0 +1,14 @@
+<div>
+	<h1>Your feedback</h1>
+
+	<textarea rows="4", cols="50" ng-keyup="caretpositions();" ng-click="caretpositions();" id="textfield">
+		{{userfeed}}
+	</textarea>
+	</br>
+  	<P>
+  		<A href="" ng-click="enterarea()" id="switch" style="font-family:Tahoma;font-size:14px;text-decoration:none;border-bottom: 1px dashed #0000F0;color:#0000F0">Show keyboard</A>
+  	</P>
+    <DIV id="keyboard"></DIV>
+  	<DIV id="k"></DIV>
+	<input type="button" id="btnfeedback" value="Submit your feedback" ng-click="submit()"/>
+</div>
