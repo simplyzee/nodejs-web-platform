@@ -1,0 +1,14 @@
+<div class="col-xs-12">
+	<h1>Start your journey!</h1>
+	<p>Scan the QR code below to load up your journal to start the treasure hunt! This is unique to you, so make sure to </p>
+	
+	<div class="text-center">
+		<qrcode data="http://192.168.1.21:3000/#/{{uuid}}/start" size="274"></qrcode>
+	</div>
+
+	<div class="well">
+		<a href="#/menu/" class="btn btn-primary btn-lg btn-block">Done</a>
+	</div>
+
+	<div ng-include="'/partials/footer.html'" ng-controller="footerController"></div>
+</div>
