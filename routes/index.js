@@ -5,7 +5,8 @@ var app               = global.app,
     express           = global.express,
     googleAnalyticsId = global.nconf.get('GOOGLE_ANALYTICS_ID'),
     ua                = require('universal-analytics'),
-    sample            = require('../controllers/sample');
+    sample            = require('../controllers/sample'),
+    dashboard         = require('../controllers/dashboard');
 
 // Heartbeat
 app.get('/heartbeat', heartbeat);
@@ -19,6 +20,7 @@ if (googleAnalyticsId) {
 app.use('/assets/', express.static(__dirname + '/../assets'));
 app.use('/components/', express.static(__dirname + '/../bower_components'));
 app.get('/', sample.index);
+app.get('/', dashboard.index);
 
 // 404 if no file or route is found
 app.use(fileNotFound);
