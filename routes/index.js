@@ -5,8 +5,7 @@ var app               = global.app,
     express           = global.express,
     googleAnalyticsId = global.nconf.get('GOOGLE_ANALYTICS_ID'),
     ua                = require('universal-analytics'),
-    sample            = require('../controllers/sample'),
-    feedback            = require('../controllers/feedback');
+    sample            = require('../controllers/sample');
 
 // Heartbeat
 app.get('/heartbeat', heartbeat);
@@ -24,10 +23,7 @@ app.get('/api/sample', sample.index);
 // Assets and Components
 app.use( express.static(__dirname + '/../client'));
 app.use('/components/', express.static(__dirname + '/../bower_components'));
-app.get('/feedback', feedback.index);
-app.get('/feedback/past', feedback.past);
-app.get('/feedback/voted', feedback.voted);
-app.get('/', sample.index);
+
 
 // Angular Application
 app.get('/', function(req, res){
