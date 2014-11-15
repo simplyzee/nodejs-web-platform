@@ -93,3 +93,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+
+# phpstorm ide files
+.idea
