@@ -1,0 +1,52 @@
+
+      <style type="text/css">
+          .poll-result {
+              text-align: center;
+              padding: 3px;
+              width: 35%;
+              margin: 0 7%;
+              position: absolute;
+              bottom: 0;
+          }
+          .poll-fill {
+              display: block;
+              background: cornflowerblue;
+              position: absolute;
+              bottom: 0;
+              height: 100%;
+              width: 100%;;
+          }
+          .poll-number {
+              position: relative;
+              top: -25px;
+          }
+          .poll-right {
+              right: 0;
+          }
+          .chart {
+              height: 300px;
+              position: relative;
+          }
+      </style>
+
+
+    <div class="poll">
+        <h2>Voted Poll Title</h2>
+        <h3>Results</h3>
+
+        <div class="chart">
+            <div class="poll-result" style="height: 70%;">
+                <span class="poll-number">3454</span>
+                <span class="poll-fill">Yes</span>
+            </div>
+            <div class="poll-result poll-right" style="height: 30%;">
+                <span class="poll-number">1054</span>
+                <span class="poll-fill">No</span>
+            </div>
+        </div>
+
+        <p>
+            <a href="/">Back to Dashboard</a>
+            <a href="/#/polls/past">Previous Polls</a>
+        </p>
+    </div>
