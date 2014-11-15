@@ -20,7 +20,7 @@ if (googleAnalyticsId) {
 app.use('/assets/', express.static(__dirname + '/../assets'));
 app.use('/components/', express.static(__dirname + '/../bower_components'));
 app.get('/', sample.index);
-app.get('/', dashboard.index);
+app.get('/dashboard', dashboard.index);
 
 // 404 if no file or route is found
 app.use(fileNotFound);
