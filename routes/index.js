@@ -17,10 +17,18 @@ if (googleAnalyticsId) {
 }
 
 // Create routes
-app.use('/assets/', express.static(__dirname + '/../assets'));
+
+// API Routes to be placed below
+app.get('/api/sample', sample.index);
+
+// Assets and Components
+app.use( express.static(__dirname + '/../client'));
 app.use('/components/', express.static(__dirname + '/../bower_components'));
-app.get('/', sample.index);
-app.get('/dashboard', dashboard.index);
+
+// Angular Application
+app.get('/', function(req, res){
+	res.render('client/app');
+});
 
 // 404 if no file or route is found
 app.use(fileNotFound);

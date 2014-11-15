@@ -7,7 +7,7 @@ function index(req, res, next) {
     title: 'Hello, World!'
   };
 
-  res.render('sample/index', data);
+  res.json(data);
 }
 
 module.exports.index = index;

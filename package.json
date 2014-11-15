@@ -10,7 +10,6 @@
     "forever-monitor": "1.x",
     "newrelic": "1.x",
     "nconf": "0.x",
-    "memwatch": "0.x",
     "express": "4.x",
     "express-session": "1.x",
     "body-parser": "1.x",
