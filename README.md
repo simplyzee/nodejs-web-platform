@@ -12,3 +12,12 @@ Template project for building NodeJS web applications.
 - [routes](https://github.com/opencityio/nodejs-web-platform/tree/master/routes)
 - [test](https://github.com/opencityio/nodejs-web-platform/tree/master/test)
 - [views](https://github.com/opencityio/nodejs-web-platform/tree/master/views)
+
+## Fork Syncing
+git remote add upstream https://github.com/opencityio/nodejs-web-platform.git
+
+git fetch upstream
+
+git checkout develop
+
+git merge upstream/develop
