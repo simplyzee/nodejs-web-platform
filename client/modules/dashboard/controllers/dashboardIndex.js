@@ -2,11 +2,11 @@ dashboard.controller('dashboardIndexController', ['$scope', 'camCanvas', functio
 	// Grab elements, create settings, etc.
 	var videoOverlay = document.getElementById("video-overlay");
 
-	camCanvas.setAttribute('width', '150%');
-	camCanvas.setAttribute('height', '150%');
-	camCanvas.id = 'video';
+	backgroundCanvas = camCanvas.cloneNode(true);
+	backgroundCanvas.setAttribute('width', '150%');
+	backgroundCanvas.setAttribute('height', '150%');
+	backgroundCanvas.setAttribute('class','video');
 
-	videoOverlay.appendChild(camCanvas);
-
-	stackBlurCanvasRGBA( camCanvas.id, 0, 0, 400, 400, 50 );
+	videoOverlay.appendChild(backgroundCanvas);
+	backgroundCanvas.play();
 }]);

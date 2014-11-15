@@ -1,0 +1,69 @@
+<style>
+	.selfie-container {
+		position: absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		overflow: hidden;
+	}
+
+	#selfie-wrap {
+		height: 100%;
+		width: 400%;
+		position: absolute;
+		left: -150%;
+	}
+
+	#selfie-wrap video {
+		height: 100%;
+		display: block;
+		margin: 0 auto;
+	}
+
+	#selfie-overlay {
+		position: absolute;
+		top:-50px;
+		left:0;
+		width: 100%;
+		height: 90%;
+		opacity: .5;
+	}
+
+	.camera-button {
+		position: absolute;
+		bottom: 50px;
+		left: 0;
+		width: 100%;
+	}
+
+	.icon-button {
+		margin: 20px auto 0 auto;
+		background: #D40518;
+		border-radius:200px;
+		width:70px;
+		height:70px;
+	}
+
+	.icon-button img {
+		height: 100%;
+	}
+
+</style>
+<div class="selfieapp" ng-click="butFirstLetMeTakeASelfie()">
+	<div class="selfie-container">
+		<div id="selfie-wrap">
+			
+		</div>
+	</div>
+
+	<img id="selfie-overlay" src="/assets/head.png" alt="">
+
+	<div class="camera-button">
+		<div class="icon-button">
+			<img src="/assets/cam.png" width="70" alt="">
+		</div>
+	</div>
+</div>
+
+<div ng-include="'/partials/footer.html'" ng-controller="footerController"></div>
