@@ -1,5 +1,5 @@
 treasurehunt.controller('treasurehuntStartController', ['$scope', function($scope){
 	
-	$scope.uuid = generateUUID();
+	$scope.uuid = 1224;
 
 }]);
