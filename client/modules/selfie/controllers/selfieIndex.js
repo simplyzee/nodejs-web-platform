@@ -1,4 +1,4 @@
-selfie.controller('selfieIndexController', ['$scope', 'camCanvas', function($scope, camCanvas){
+selfie.controller('selfieIndexController', ['$scope', '$http', 'camCanvas', function($scope, $http, camCanvas){
 	
 	var selfieVideo = camCanvas.cloneNode(true);
 	var selfieWrap = document.getElementById("selfie-wrap");
@@ -19,8 +19,15 @@ selfie.controller('selfieIndexController', ['$scope', 'camCanvas', function($sco
 
 		selfieContext.drawImage(selfieVideo, 0, 0, 640, 480);
 		var image = selfieCanvas.toDataURL();
+		selfieVideo.pause();
+
 		console.log(image);
-		// Send image to selfie api, then do something, maybe direct user back to menu?
+		
+		$http.post('http://whatson.dev.opencity.io/selfie', {
+			image: image
+		}).success(function(data){
+			console.log(data);
+		});
 	}
 
 }]);
