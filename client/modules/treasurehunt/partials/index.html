@@ -1,0 +1,57 @@
+<div class="col-xs-12">
+	<h1>Treasure Hunt</h1>
+	<p>Explore Peterborough through our vibrant treasure hunt.</p>
+
+	<div class="well">
+		<a href="#/treasurehunt/start" class="btn btn-primary btn-lg btn-block">Start</a>
+	</div>
+
+	<h2>Active Participants</h2>
+	<table class="table table-responsive table-striped">
+		<thead>
+			<tr>
+				<th>Team Name</th>
+				<th>Time Started</th>
+				<th>Complete</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>The Hunters</td>
+				<td>1 hour ago</td>
+				<td><a href="#/treasurehunt/2/complete" class="btn btn-default">Enter Solution</a></td>
+			</tr>
+			<tr>
+				<td>#TeamAwesome</td>
+				<td>30 minutes ago</td>
+				<td><a href="#/treasurehunt/1/complete" class="btn btn-default">Enter Solution</a></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2>Leaderboard</h2>
+	<table class="table table-responsive table-striped">
+		<thead>
+			<tr>
+				<th>Team Name</th>
+				<th>Time Started</th>
+				<th>Time Completed</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>OpenCity</td>
+				<td>3 days ago</td>
+				<td>1 hour 10 minutes</td>
+			</tr>
+			<tr>
+				<td>#Chainsmokers</td>
+				<td>2 days ago</td>
+				<td>1 hour 20 minutes</td>
+			</tr>
+		</tbody>
+	</table>
+
+</div>
+
+<div ng-include="'/partials/footer.html'" ng-controller="footerController"></div>
