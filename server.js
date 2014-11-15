@@ -6,7 +6,6 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 var nconf        = require('nconf'),
-    memwatch     = require('memwatch'),
     environment  = process.env.NODE_ENV || 'development',
     express      = require('express'),
     app          = global.app = express(),
@@ -18,16 +17,6 @@ if (process.env.NODE_ENV === 'production') {
   global.newrelic = newrelic;
 }
 
-// Add memwatch
-memwatch.on('leak', function(info) {
-  console.log('memwatch - leak'.bold.red);
-  console.log(info);
-});
-
-memwatch.on('stats', function(stats) {
-  console.log('memwatch - stats'.bold.blue);
-  console.log(stats);
-});
 
 // Load configuration data
 nconf
