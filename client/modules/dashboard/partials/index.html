@@ -1,1 +1,40 @@
-Test
+<style>
+	body {
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		background: #000;
+	}
+
+	.video-wrap {
+		position: absolute;
+		width:100%;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	#video {
+	    -webkit-filter: blur(20px);
+	    -webkit-transform: translate3d(0, 0, 0);
+	    position: absolute;
+	    top:-50%;
+	    left:-50%;
+	    width: 200%;
+	    height: 200%;
+	}
+
+	.overlay {
+		position: relative;
+		text-align: center;
+		z-index: 100;
+		color:#fff;
+	}
+	</style>
+
+<div class="video-wrap" id="video-overlay">
+</div>
+
+<div class="overlay">
+	<a href="#/menu"><img src="/assets/smiley-face.png" alt=""></a>
+	<h1>Hello there</h1>
+</div>

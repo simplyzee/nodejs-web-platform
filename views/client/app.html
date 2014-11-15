@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html ng-app="app">
 	<head>
+
+		
+		<script src="/assets/StackBlur.js"></script>
 		
 		<script src="/components/angular/angular.min.js"></script>
 		<script src="/components/angular-bootstrap/ui-bootstrap.min.js"></script>
 		<script src="/components/angular-route/angular-route.min.js"></script>
 		<script src="/components/angular-touch/angular-touch.min.js"></script>
+		
 
 		<link rel="stylesheet" href="/components/bootstrap/dist/css/bootstrap.css">
 	</head>
@@ -16,6 +20,9 @@
 		<!-- Main App -->
 		<script src="/js/app.js"></script>
 
+		<!-- Services -->
+		<script src="/js/services/camcanvas.js"></script>
+
 		<!-- Sample Feature -->
 		<script src="/modules/sample/sample.js"></script>
 		<script src="/modules/sample/controllers/sampleIndex.js"></script>
@@ -23,10 +30,10 @@
         <!-- Dashboard Feature -->
         <script src="/modules/dashboard/dashboard.js"></script>
         <script src="/modules/dashboard/controllers/dashboardIndex.js"></script>
+		<script src="/modules/dashboard/controllers/dashboardMenu.js"></script>
 
         <!-- Polls Feature -->
         <script src="/modules/polls/polls.js"></script>
         <script src="/modules/polls/controllers/pollsIndex.js"></script>
-
 	</body>
 </html>
