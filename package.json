@@ -8,7 +8,7 @@
   "private": true,
   "dependencies": {
     "forever-monitor": "1.x",
-    "newrelic": "1.x",
+    "newrelic": "4.0.0",
     "nconf": "0.x",
     "express": "4.x",
     "express-session": "1.x",
