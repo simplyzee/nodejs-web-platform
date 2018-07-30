@@ -21,7 +21,7 @@
     "async": "0.x",
     "request": "2.x",
     "uuid": "1.x",
-    "extend": "1.x",
+    "extend": "2.0.2",
     "ssh-key-decrypt": "0.x",
     "date-utils": "1.x",
     "moment": "2.x",
