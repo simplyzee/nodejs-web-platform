@@ -7,7 +7,7 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "forever-monitor": "1.x",
+    "forever-monitor": "3.0.2",
     "newrelic": "1.x",
     "nconf": "0.x",
     "express": "4.x",
@@ -18,7 +18,7 @@
     "gaikan": "git://github.com/barringtonhaynes/gaikan.git",
     "universal-analytics": "0.x",
     "colors": "0.x",
-    "async": "0.x",
+    "async": "3.2.2",
     "request": "2.x",
     "uuid": "1.x",
     "extend": "1.x",
